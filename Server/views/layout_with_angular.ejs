@@ -1,0 +1,69 @@
+<!--Intregration of angular js into ejs -->
+<!DOCTYPE html>
+
+ <html>
+   <head>
+     <meta charset="utf-8">
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title><%= h.siteName %></title>
+     <link rel="stylesheet" href="/css/style.css">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+	<link  rel="stylesheet" type="text/css" href="css/font-awesome.min.css" ></link> 
+    <!--STYLES END-->
+
+   </head>
+    <nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="http://localhost:1337/">MyApp </a>
+			</div>
+       <div class="collapse navbar-collapse" id="mynavbar">
+		   <ul class="nav navbar-nav">
+				<li class="active"><a href="#">HOME</a></li>
+				<li clss="dropdown">
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Tab 1<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Sub Tab 1</a></li>
+						<li><a href="#">Sub Tab 2</a></li>
+						<li><a href="#">Sub Tab 3</a></li>	
+					</ul>
+				</li>
+				<li><a href="#">Tab 2</a></li>
+				<li><a href="/user">Users</a></li>
+				<li><a href="#">Blog</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><span class="glyphicon glyphicon-comment"></span><span class="badge badge-notify">1</span>Notification</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+   <body>
+     <%- body %>
+     
+    <!-- external scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+ 	 <script src="js/custome.js"></script>
+	<script src="js/angular.min.js"></script>
+    <script src="js/angular-ui-router.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="commonController.js"></script>
+   </body>
+    
+ </html>
