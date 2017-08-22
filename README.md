@@ -12,5 +12,6 @@ There are basically two folders
 1) Client
 2) server
 
-Client having Angular app 
+Client having Angular app
+
 server having express server instance
