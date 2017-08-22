@@ -1,7 +1,8 @@
 angular.module('eventApp')
 .controller('eventController',["$scope" ,function(scope){
-    scope.siteName = "Express";
-    
+    scope.siteName = "<span style='color:red;'>This is ng-bind-html</span> ";
+    scope.myStyle = {color:'red'};
+    scope.sortorder='name';
     scope.event ={
         name : 'Angular Boot camp',
         date: new Date(),

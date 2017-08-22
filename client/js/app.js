@@ -1,5 +1,5 @@
 (function(){
     'use strict';
-    angular.module('eventApp',[]);
+    angular.module('eventApp',['angularjs-datetime-picker']);
 
 })()
