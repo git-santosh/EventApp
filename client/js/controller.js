@@ -18,7 +18,7 @@ angular.module('eventApp')
                 name:'JavaScript ',
                 creatorName :'Alen',
                 duration:'1 hr',
-                level:'Introductory',
+                level:'introductory',
                 abstract:'This session will take closer look at JavaScript Object and inheritance',
                 upVoteCount:0
             },
@@ -26,15 +26,15 @@ angular.module('eventApp')
                 name:'Node ',
                 creatorName :'Ryan Dahl',
                 duration:'2 hr',
-                level:'Advanced',
-                abstract:'Learn Node.js from scratch and become zero to hero',
+                level:'advanced',
+                abstract:'Learn Node.js intermediate course from scratch and become zero to hero',
                 upVoteCount:0
             },
             {
                 name:'Angular ',
                 creatorName :'Misko Hevery',
                 duration:'30 min',
-                level:'Intermediate',
+                level:'intermediate',
                 abstract:'Learn Angualr js introduction',
                 upVoteCount:0
             },
@@ -42,7 +42,7 @@ angular.module('eventApp')
                 name:'Ember',
                 creatorName :'Yehuda Katz',
                 duration:'30 min',
-                level:'Advanced',
+                level:'advanced',
                 abstract:'Learn Ember js fully setp by step',
                 upVoteCount:0
             }

@@ -53,8 +53,20 @@
 			
 			<hr>
 			<h3>Sessions</h3>
+			Order By :
+			<select name="" id="" ng-model="sortorder" class="input-small">
+				<option value="name" selected>name</option>
+				<option value="-upVoteCount">Votes </option>
+			</select>
+			Show
+			<select name="" id="" ng-model="query.level" class="input-medium">
+				<option value="" selected>All</option>
+				<option value="advanced">Advanced</option>
+				<option value="intermediate">Intermediate</option>
+				<option value="Introductory">Introductory</option>
+			</select>
 			<ul class="thumbnails">
-				<li ng-repeat="session in event.sessions | orderBy :sortorder">
+				<li ng-repeat="session in event.sessions | orderBy :sortorder | limitTo:2 | filter: query">
 					
 					<div class="row session">
 						<div class="span0 well votingWidget">
@@ -75,7 +87,7 @@
 							</h4>
 							<h6 style="margin-top:-10px">{{session.creatorName}}</h6>
 							<span>Duration :{{session.duration}}</span></br>
-							<span>Leval :{{session.leval}}</span>
+							<span>Level :{{session.level}}</span>
 							<p>Abstract :{{session.abstract}}</p>
 						</div>
 					</div>

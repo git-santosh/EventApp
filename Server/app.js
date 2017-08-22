@@ -34,22 +34,22 @@ const index = require('./routes/index');
 app.use('/',index);
 
 // catch 404 and forward to error handle
-app.use((req,res,next)=>{
-    const error = new Error('Not Found');
-    error.status = 404;
-    next(error);
-});
+// app.use((req,res,next)=>{
+//     const error = new Error('Not Found');
+//     error.status = 404;
+//     next(error);
+// });
 
 //Error Handler
-app.use((error,req,res,next) =>{
-    console.log(error);
-    res.locals.message = error.message;
-    res.locals.status = error.status;
-    res.locals.error = app.get('env') === 'development' ? error : {};
-    // render the error page
-    res.status(error.status || 500);
-    res.render('error');
-});
+// app.use((error,req,res,next) =>{
+//     console.log(error);
+//     res.locals.message = error.message;
+//     res.locals.status = error.status;
+//     res.locals.error = app.get('env') === 'development' ? error : {};
+//     // render the error page
+//     res.status(error.status || 500);
+//     res.render('error');
+// });
 
 
 app.listen(app.get('port'),function(){
