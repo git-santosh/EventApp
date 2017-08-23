@@ -54,4 +54,5 @@ angular.module('eventApp')
      scope.downVoteSession = function(session){
         session.upVoteCount-- ;
     }
+ 
 }]);

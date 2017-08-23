@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="css/angularjs-datetime-picker.css" />
 	<style>
 		img.icons{ width: 25px}
-		.navbar-brand.lgo{padding-top: 18px;}
+        .navbar-brand.lgo{padding-top: 18px;}
+        input.ng-invalid.ng-dirty {background-color: pink}
 	</style>
 </head>
 
@@ -37,27 +38,27 @@
             <div class="container">
                 <h1>New Event</h1>
                 <hr>
-                <from>
+                <form name="newEventForm">
                     <fieldset>
                         <label for="eventName "> Event Name</label>
-                        <input type="text" id="eventName" placeholder="Name of your Event">
+                        <input type="text" required id="eventName" ng-model="event.name" placeholder="Name of your Event">
                         <label for="eventDate "> Event Date</label>
-                        <input type="text" id="eventdate" datetime-picker ng-model="model" placeholder="Date" date-format="yyyy-MM-dd" date-only>
+                        <input type="text" required id="eventdate" ng-model="event.date" datetime-picker ng-model="model" placeholder="Date" date-format="yyyy-MM-dd" date-only>
                         <label for="eventTime"> Event Time</label>
-                        <input type="text" id="eventTime"  placeholder="Start and end time">
+                        <input type="text" required id="eventTime"  ng-model="event.time" placeholder="Start and end time">
                         <label for="eventLocation "> Event Location</label>
-                        <input type="text" id="eventLocation"  placeholder="Address of event...">
+                        <input type="text" required id="eventLocation" ng-model="event.location.address" placeholder="Address of event...">
                         <label for="eventCity"> Event City</label>
-                        <input type="text" id="eventCity" class="input-small" placeholder="City">
-                        <input type="text" id="eventState" class="input-small" placeholder="State">
+                        <input type="text" required id="eventCity" ng-model="event.location.city" class="input-small" placeholder="City">
+                        <input type="text" id="eventState" ng-model="event.location.state" class="input-small" placeholder="State">
                         
                         <label for="eventImgUrl "> Event Location</label>
-                        <input type="url" id="eventImgUrl" class="input-xlarge" placeholder="URL of Image">
+                        <input type="url" required id="eventImgUrl" ng-model="event.imageUrl" class="input-xlarge" placeholder="URL of Image">
                     </fieldset>
                     <img ng-src="{{event.imageUrl}}" alt=""> <br><br>
-                    <button type="submit" class="btn btn-primary">save</button>
-                    <button type="button" class="btn btn-default">Cancel</button>
-                </from>
+                    <button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event,newEventForm)" class="btn btn-primary">save</button>
+                    <button type="button" ng-click="cancelEvent()" class="btn btn-default">Cancel</button>
+                </form>
             </div>
         </div>
 	</div>
@@ -71,7 +72,6 @@
 	<script src="js/lib/angularjs-datetime-picker.js"></script> 
     <!-- application scripts -->
     <script src="js/app.js"></script>
-    <script src="js/controller.js"></script>
     <script src="js/EditEventController.js"></script>
  
 </body>
