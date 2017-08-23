@@ -1,4 +1,7 @@
 /* app css stylesheet */
+html {
+  overflow-y: scroll;
+}
 .hoverwell:hover {
   background-color: #52575c;
   cursor: pointer;

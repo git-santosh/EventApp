@@ -1,5 +1,7 @@
+var eventApp="";
 (function(){
     'use strict';
-    angular.module('eventApp',['angularjs-datetime-picker']);
+    eventApp = angular.module('eventApp',['angularjs-datetime-picker']);
 
 })()
+
