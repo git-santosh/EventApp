@@ -12,7 +12,7 @@ mongoose.Promise = global.Promise;
 mongoose.connection.on('error',(err) =>{
    console.log(`mongoDB Error :  ${err.message} \n Please start mongoDB server `);
 });
-
+require('./models/event');
 var rootPath = path.normalize(__dirname+'/../');
 
 //View engine set up
