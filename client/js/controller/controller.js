@@ -13,7 +13,7 @@
  
 // }]);
 angular.module('eventApp')
-.controller('eventController',function($scope ,eventData  ){
+.controller('eventController',function($scope ,eventData){
     $scope.siteName = "<span style='color:red;'>This is ng-bind-html</span> ";
     $scope.myStyle = {color:'red'};
     $scope.sortorder='name';
