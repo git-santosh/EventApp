@@ -6,11 +6,10 @@ exports.homePage = (req,res) =>{
 }
 exports.addEvent = (req,res) => {
     const event = new Event(req.body);
-    Event.create(event,function(err,data){
-        if(err){
-            return res.status(401).send({success:false,data:err});
-        }
+    event.save().then(event =>{
          res.send({success:true,data:'save successfully'});
+    }).catch(err =>{
+        return res.status(401).send({success:false,data: err});
     })
    
 }
