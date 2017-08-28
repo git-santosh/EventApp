@@ -6,9 +6,11 @@ var eventSchema = new Schema({
     name:String,
     date:Date,
     time:String,
-    address:String,
-    city:String,
-    state:String,
+    location:{
+        address:String,
+        city:String,
+        state:String
+    },
     imageUrl:String
 });
 

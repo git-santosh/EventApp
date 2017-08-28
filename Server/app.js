@@ -12,6 +12,7 @@ mongoose.Promise = global.Promise;
 mongoose.connection.on('error',(err) =>{
    console.log(`mongoDB Error :  ${err.message} \n Please start mongoDB server `);
 });
+//import all of our models 
 require('./models/event');
 var rootPath = path.normalize(__dirname+'/../');
 
