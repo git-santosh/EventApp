@@ -4,7 +4,7 @@ const eventController = require('../controller/eventController');
 //get home page 
 
 router.get('/',eventController.homePage);
-router.get('/add',eventController.addPage);
+router.post('/add',eventController.addEvent);
 // serve angular app files from the '/app' route
 //router.use('/', express.static('app'));
 module.exports =router;

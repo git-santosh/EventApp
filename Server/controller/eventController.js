@@ -4,6 +4,6 @@ exports.homePage = (req,res) =>{
     res.render('index');
 }
 
-exports.addPage = (req,res) => {
-    res.send('Its works');
+exports.addEvent = (req,res) => {
+    res.send({data:'save successfully'});
 }
