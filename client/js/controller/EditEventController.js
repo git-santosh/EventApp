@@ -1,15 +1,16 @@
 angular.module('eventApp')
-.controller('EditEventController',function($scope,eventData,Flash){
-    Flash.create('success', 'Hooray!', 0, {container: 'flash-fixed'});
-    $scope.message="";
+.controller('EditEventController',function($scope,eventData,notification){
     $scope.saveEvent = function(event,newEventForm){
         if(newEventForm.$valid){
             eventData.saveEvent(event).then(function(data){
-                console.log('data : '+data.data)
-                $scope.message =data.data
+                console.log('data : '+data.data);
+                if(data.success){
+                    notification.success(data.data);
+                }else{
+                    notification.error(data.data)
+                }
+                
             })
-             
-             console.log($scope.message);
         }else{
             alert('invalid')
         }

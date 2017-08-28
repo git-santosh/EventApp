@@ -1,3 +1,3 @@
-var eventApp = angular.module('eventApp',['angularjs-datetime-picker','ngFlash']);
+var eventApp = angular.module('eventApp',['angularjs-datetime-picker','toastr']);
 
 
